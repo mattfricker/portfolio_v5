@@ -21,6 +21,10 @@ module.exports = {
             {
                 test: /\.png$/,
                 loader: 'file'
+            },
+            {
+                test: /\.css$/,
+                loaders: ['style', 'css', 'cssnext']
             }
         ]
     }

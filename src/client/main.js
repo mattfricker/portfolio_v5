@@ -6,6 +6,8 @@ import { createStore } from 'redux'
 import homepageApp from './reducers'
 import App from './components/App'
 
+import css from './styles/app.css'
+
 let store = createStore(homepageApp, {portfolio: {initial: 'shades'}});
 
 render(

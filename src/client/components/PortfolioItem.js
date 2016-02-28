@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Header = ({text}) => (
+const PortfolioItem = ({text}) => (
   <p>
     {text}
   </p>
 )
 
-export default Header
+export default PortfolioItem

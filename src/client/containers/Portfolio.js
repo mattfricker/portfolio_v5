@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import PortfolioItem from '../components/PortfolioItem'
+import PortfolioInfo from '../components/PortfolioInfo'
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -14,6 +14,6 @@ const mapDispatchToProps = (dispatch, ownProps) => {
 const Portfolio = connect(
   mapStateToProps,
   mapDispatchToProps
-)(PortfolioItem)
+)(PortfolioInfo)
 
 export default Portfolio

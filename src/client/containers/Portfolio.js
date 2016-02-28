@@ -2,9 +2,7 @@ import { connect } from 'react-redux'
 import PortfolioInfo from '../components/PortfolioInfo'
 
 const mapStateToProps = (state, ownProps) => {
-  return {
-    text: state.portfolio.initial
-  }
+  return {items: state.portfolio};
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => {

@@ -10,7 +10,16 @@
     flex-direction: column
 }
 
+.header {
+    position: relative;
+    animation-name: slideLeft;
+    animation-duration: 1s;
+}
+
 .mainImage {
     width: 450px;
     height: 250px;
+    position: relative;
+    animation-name: slideRight;
+    animation-duration: 1s;
 }

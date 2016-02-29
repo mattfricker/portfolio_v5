@@ -1,9 +1,7 @@
 @import '../config.css';
 
 .root {
-    background: var(--mainColor)!important;
     min-height: 80vh;
-    color: white;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -15,6 +13,7 @@
 }
 
 .contentHolder {
+    min-height: 75vh;
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -28,14 +27,6 @@
     position: relative;
     animation-name: slideLeft;
     animation-duration: 1s;
-}
-
-.list {
-    background: var(--mainColor)!important;
-}
-
-.listItem {
-    color: #444!important;
 }
 
 .mainImage {

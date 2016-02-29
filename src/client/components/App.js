@@ -7,9 +7,9 @@ import Process from './Process'
 const App = () => (
     <div>
         <Header />
-        <StackInfo />
         <Portfolio />
         <Process />
+        <StackInfo />
     </div>
 )
 

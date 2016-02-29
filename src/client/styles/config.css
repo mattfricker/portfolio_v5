@@ -1,3 +1,14 @@
 :root {
     --mainColor: #00bcd4;
+
+}
+
+@keyframes slideLeft {
+    from {left: 100vw}
+    to {left: 0}
+}
+
+@keyframes slideRight {
+    from {right: 100vw}
+    to {right: 0}
 }

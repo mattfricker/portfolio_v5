@@ -1,3 +1,5 @@
+@import '../config.css';
+
 .root {
     display: flex;
     flex-direction: column;
@@ -7,4 +9,7 @@
 .header {
     margin-top: 10vh;
     font-size: 36px;
+    position: relative;
+    animation-name: slideRight;
+    animation-duration: 2s;
 }

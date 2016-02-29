@@ -1,4 +1,9 @@
+@import '../config.css';
+
 .root {
     width: 70%;
     margin: 5vh 0;
+    position: relative;
+    animation-name: slideLeft;
+    animation-duration: 2s;
 }

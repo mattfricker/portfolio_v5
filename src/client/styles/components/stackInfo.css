@@ -2,7 +2,7 @@
 
 .root {
     background: var(--mainColor)!important;
-    height: 80vh;
+    min-height: 80vh;
     color: white;
     display: flex;
     justify-content: space-around;
@@ -20,6 +20,9 @@
     width: 66^;
     display: flex;
     flex-wrap: wrap;
+    position: relative;
+    animation-name: slideLeft;
+    animation-duration: 1s;
 }
 
 .list {
@@ -35,4 +38,7 @@
     height: 320px;
     border: 2px solid #ccc;
     border-top: none;
+    position: relative;
+    animation-name: slideRight;
+    animation-duration: 1s;
 }

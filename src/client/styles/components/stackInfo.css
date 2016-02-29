@@ -26,6 +26,10 @@
     background: var(--mainColor)!important;
 }
 
+.listItem {
+    color: #444!important;
+}
+
 .mainImage {
     width: 192px;
     height: 320px;

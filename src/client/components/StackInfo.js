@@ -59,9 +59,17 @@ const Process = ({ css }) => (
             <img className={css.mainImage} src={tetris}></img>
             <div className={css.listContainer}>
                 {stackItems.map((item, index) => (
-                    <List className={css.list} key={index} subheader={item.title}>
+                    <List 
+                    className={css.list} 
+                    key={index} 
+                    subheader={item.title}>
                         {item.items.map(technology => (
-                            <ListItem className={css.listItem} key={technology} primaryText={technology} />
+                            <ListItem 
+                            className={css.listItem} 
+                            key={technology} 
+                            primaryText={technology}
+                            disabled={true}
+                            />
                         ))}
                     </List>
                 ))}

@@ -15,6 +15,7 @@
 }
 
 .contentHolder {
+    min-height: 75vh;
     width: 100%;
     display: flex;
     justify-content: space-around;

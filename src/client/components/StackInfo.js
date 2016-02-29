@@ -20,7 +20,9 @@ const stackItems = [
             "React",
             "HTML",
             "CSS",
-            "jQuery"
+            "jQuery",
+            "Sass",
+            "Bootstrap"
         ]
     },
     {
@@ -28,14 +30,16 @@ const stackItems = [
         items: [
             "Node",
             "Expess",
-            "Web services"
+            "Web services",
+            "MySQL",
+            "MongoDB"
         ]
     },
     {
-        title: "Databases",
+        title: "Package Managers",
         items: [
-            "MySQL",
-            "MongoDB"
+            "npm",
+            "Bower"
         ]
     },
     {

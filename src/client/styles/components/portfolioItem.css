@@ -3,7 +3,10 @@
 .root {
     width: 70%;
     margin: 5vh 0;
+}
+
+.card {
     position: relative;
     animation-name: slideLeft;
-    animation-duration: 2s;
+    animation-duration: 1500ms;
 }

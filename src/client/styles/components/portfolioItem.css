@@ -1,8 +1,8 @@
 @import '../config.css';
 
 .root {
-    width: 70%;
-    margin: 5vh 0;
+    width: 95%;
+    margin: 2.5% 0;
 }
 
 .slideLeft {
@@ -15,4 +15,11 @@
     position: relative;
     animation-name: slideRight;
     animation-duration: 1500ms;
+}
+
+@media (--medium) {
+    .root {
+        width: 70%;
+        margin: 5vh 0;
+    }
 }

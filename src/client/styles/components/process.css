@@ -24,9 +24,9 @@
     animation-duration: 1s;
 }
 
-@media(--medium) {
+@media(--small) {
     .mainImage {
-        width: 400px;
+        width: 450px;
         height: 250px;
     }
 }

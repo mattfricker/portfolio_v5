@@ -42,9 +42,7 @@
 
 @media (--medium) {
     .contentHolder {
-        flex-direction: column;
+        flex-direction: row;
     }
-    .listContainer {
-        width: 66%;
-    }
+
 }

@@ -11,9 +11,9 @@ import CardText from 'material-ui/lib/card/card-text';
 
 import css from '../styles/components/portfolioItem.css';
 
-const PortfolioItem = ({css, title, image, link, description, status}) => (
+const PortfolioItem = ({css, title, image, link, description, status, index}) => (
   <LazyLoad offsetVertical={80} className={css.root}>
-    <Card className={css.card}>
+    <Card className={index % 2 == 0 ? css.slideLeft : css.slideRight}>
         <CardMedia
         overlay={<CardTitle title={title} subtitle={status} />}
         >

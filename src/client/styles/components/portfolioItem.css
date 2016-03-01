@@ -5,8 +5,14 @@
     margin: 5vh 0;
 }
 
-.card {
+.slideLeft {
     position: relative;
     animation-name: slideLeft;
+    animation-duration: 1500ms;
+}
+
+.slideRight {
+    position: relative;
+    animation-name: slideRight;
     animation-duration: 1500ms;
 }

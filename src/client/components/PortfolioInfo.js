@@ -15,6 +15,7 @@ const PortfolioInfo = ( {css, items }) => (
                 description={item.description}
                 image={item.image}
                 status={item.status}
+                index={index}
             />
         )}
     </div>

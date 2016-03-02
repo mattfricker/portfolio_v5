@@ -14,6 +14,10 @@ module.exports = {
     
     module: {
         loaders: [
+            { 
+                test: /\.json$/, 
+                loader: "json" 
+            },
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
@@ -54,5 +58,9 @@ module.exports = {
         historyApiFallback: true,
         port: 3001,
         hot: true
+    },
+    
+    node: {
+        fs: "empty"
     }
 }

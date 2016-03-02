@@ -4,8 +4,9 @@
   "description": "A hompage and portfolio site built with ReactJS on the client",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server",
-    "test": "mocha './src/**/*.spec.js' --compilers js:babel-core/register"
+    "start": "webpack-dev-server --progress",
+    "test": "mocha './src/**/*.spec.js' --compilers js:babel-core/register",
+    "build": "NODE_ENV=production webpack ./webpack.production.config.js --progress"
   },
   "author": "Matthew S. Fricker",
   "license": "ISC",
@@ -35,6 +36,7 @@
     "css-loader": "^0.23.1",
     "cssnext-loader": "^1.0.1",
     "expect": "^1.14.0",
+    "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
     "html-webpack-plugin": "^2.9.0",
     "mocha": "^2.4.5",

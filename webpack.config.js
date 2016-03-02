@@ -1,14 +1,21 @@
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
+    
     devtool: 'eval-source-map',
+    
     entry: './src/client/main.js',
+    
     output: {
-        path: './',
+        path: __dirname + '/build',
         filename: 'index.js'
     },
+    
     devServer: {
         inline: true,
         port: 3001
     },
+    
     module: {
         loaders: [
             {
@@ -34,7 +41,14 @@ module.exports = {
             }
         ]
     },
+    
     postcss: [
         require('autoprefixer')
-    ]
+    ],
+    
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: __dirname + "/src/client/index.tmpl.html"
+        })
+    ],
 }

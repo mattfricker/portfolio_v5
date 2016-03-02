@@ -25,6 +25,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "devDependencies": {
+    "autoprefixer": "^6.3.3",
     "babel-cli": "^6.5.1",
     "babel-core": "^6.5.1",
     "babel-loader": "^6.2.2",
@@ -35,6 +36,7 @@
     "expect": "^1.14.0",
     "file-loader": "^0.8.5",
     "mocha": "^2.4.5",
+    "postcss-loader": "^0.8.1",
     "react-addons-test-utils": "^0.14.7",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.13"

@@ -1,3 +1,4 @@
+var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -9,11 +10,6 @@ module.exports = {
     output: {
         path: __dirname + '/build',
         filename: 'index.js'
-    },
-    
-    devServer: {
-        inline: true,
-        port: 3001
     },
     
     module: {
@@ -49,6 +45,14 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: __dirname + "/src/client/index.tmpl.html"
-        })
+        }),
+        new webpack.HotModuleReplacementPlugin()
     ],
+    
+    devServer: {
+        inline: true,
+        historyApiFallback: true,
+        port: 3001,
+        hot: true
+    }
 }

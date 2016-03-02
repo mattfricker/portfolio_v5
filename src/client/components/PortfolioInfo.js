@@ -5,7 +5,7 @@ import PortfolioItem from './PortfolioItem'
 import css from '../styles/components/portfolioInfo.css';
 
 const PortfolioInfo = ( {css, items }) => (
-    <div className={css.root}>
+    <div id="portfolio" className={css.root}>
         <h2 className={css.header}> Recent Work </h2>
         {items.map((item, index) => 
             <PortfolioItem
@@ -15,6 +15,7 @@ const PortfolioInfo = ( {css, items }) => (
                 description={item.description}
                 image={item.image}
                 status={item.status}
+                codeSample={item.codeSample}
                 index={index}
             />
         )}

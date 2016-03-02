@@ -24,10 +24,6 @@
     align-items: center;
 }
 
-.button {
-    height: 10vh!important;
-}
-
 @media (--medium) {
     .cta {
         background: url('../../../../assets/images/rock/rock-medium.jpg');

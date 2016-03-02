@@ -11,7 +11,7 @@ import CardText from 'material-ui/lib/card/card-text';
 
 import css from '../styles/components/portfolioItem.css';
 
-const PortfolioItem = ({css, title, image, link, description, status, index}) => (
+const PortfolioItem = ({css, title, image, link, description, status, codeSample, index}) => (
   <LazyLoad offsetVertical={80} className={css.root}>
     <Card className={index % 2 == 0 ? css.slideLeft : css.slideRight}>
         <CardMedia
@@ -23,8 +23,8 @@ const PortfolioItem = ({css, title, image, link, description, status, index}) =>
             {description}
         </CardText>
         <CardActions>
-        <FlatButton label="Visit Page" />
-        <FlatButton label="See GitHub Repo" />
+        <FlatButton linkButton={true} href={link} label="Visit Page" />
+        <FlatButton linkButton={true} href={codeSample} label="See Code Sample" />
         </CardActions>
     </Card>
   </LazyLoad>

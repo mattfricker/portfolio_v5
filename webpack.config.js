@@ -27,6 +27,11 @@ module.exports = {
                 test: /\.(png|jpe?g|svg)$/,
                 exclude: /node_modules/,
                 loader: 'file!img?minimize&progressive=true'
+            },            
+            {
+                test: /\.(ttf|eod)$/,
+                exclude: /node_modules/,
+                loader: 'file'
             },
             {
                 test: /\.css$/,

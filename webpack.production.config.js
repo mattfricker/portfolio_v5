@@ -32,6 +32,11 @@ module.exports = {
                 loader: 'file!img?minimize&progressive=true'
             },
             {
+                test: /\.(ttf|eod)$/,
+                exclude: /node_modules/,
+                loader: 'file'
+            },
+            {
                 test: /\.css$/,
                 exclude: /node_modules/,
                 loader: ExtractTextPlugin.extract('style', 'css?modules!postcss!cssnext')

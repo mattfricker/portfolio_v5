@@ -11,23 +11,36 @@
 .cta {
     min-height: 90vh;
     background: url('../../../../assets/images/rock/rock-small.jpg');
-    background-size: cover;
+    background-size: auto 120%;
     display: flex;
-    align-items: center;
+    align-items: soace-between;
     justify-content: center;
+    text-shadow: -3px 0px white, 3px 0px white, 0px -3px white, 0px 3px white;
+    letter-spacing: 2px;
+    padding-bottom: 5vh;
 }
 
 .actionHolder {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+}
+
+@media screen and (orientation:landscape) {
+    .cta {
+        background: url('../../../../assets/images/rock/rock-medium.jpg');
+        background-size: 100%;
+    }
 }
 
 @media (--medium) {
     .cta {
-        background: url('../../../../assets/images/rock/rock-medium.jpg');
+        align-items: center;
         justify-content: flex-end;
+        padding-bottom: 0;
+        text-shadow: none;
+        letter-spacing: 0;
     }
     .actionHolder {
         width: 40vw;

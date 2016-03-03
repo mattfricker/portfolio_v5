@@ -59,7 +59,7 @@ const stackItems = [
 
 const Process = ({ css }) => (
     <Paper className={css.root}>
-        <h2 className={css.header}>My Stack</h2>
+        <h2 className={css.header}>My Tech Stack</h2>
         <div className={css.contentHolder}>
             <LazyLoad debounce={false} offsetVertical={80}>
                 <img className={css.mainImage} src={tetris}></img>

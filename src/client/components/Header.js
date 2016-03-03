@@ -24,7 +24,7 @@ const Header = ({ css }) => (
         />
         <div className={css.cta}>
             <div className={css.actionHolder}>
-                <h1> Front-end Developer </h1>
+                <h1> Web Developer </h1>
                 <RaisedButton 
                     className={css.button}
                     linkButton={true} 

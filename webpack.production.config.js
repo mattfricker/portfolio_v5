@@ -5,6 +5,8 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     
+    devtool: 'cheap-module-source-map',
+    
     entry: './src/client/main.js',
     
     output: {
@@ -15,7 +17,8 @@ module.exports = {
     module: {
         loaders: [
             { 
-                test: /\.json$/, 
+                test: /\.json$/,
+                exclude: /node_modules/,
                 loader: "json" 
             },
             {
@@ -24,19 +27,13 @@ module.exports = {
                 loader: 'babel'
             },
             {
-                test: /\.png$/,
-                loader: 'file'
-            },            
-            {
-                test: /\.jpg$/,
-                loader: 'file'
-            },            
-            {
-                test: /\.svg$/,
-                loader: 'file'
+                test: /\.(png|jpe?g|svg)$/,
+                exclude: /node_modules/,
+                loader: 'file!img?minimize&progressive=true'
             },
             {
                 test: /\.css$/,
+                exclude: /node_modules/,
                 loader: ExtractTextPlugin.extract('style', 'css?modules!postcss!cssnext')
             }
         ]
@@ -52,6 +49,11 @@ module.exports = {
         }),
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.optimize.UglifyJsPlugin(),
-        new ExtractTextPlugin("[name]-[hash].css")
+        new ExtractTextPlugin("[name]-[hash].css"),
+        new webpack.DefinePlugin({
+            'process.env': {
+                'NODE_ENV': JSON.stringify('production'),
+            }
+        })
     ]
 }

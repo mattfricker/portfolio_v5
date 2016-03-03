@@ -24,16 +24,9 @@ module.exports = {
                 loader: 'babel'
             },
             {
-                test: /\.png$/,
-                loader: 'file'
-            },            
-            {
-                test: /\.jpg$/,
-                loader: 'file'
-            },            
-            {
-                test: /\.svg$/,
-                loader: 'file'
+                test: /\.(png|jpe?g|svg)$/,
+                exclude: /node_modules/,
+                loader: 'file!img?minimize&progressive=true'
             },
             {
                 test: /\.css$/,

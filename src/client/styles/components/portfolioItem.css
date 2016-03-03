@@ -5,18 +5,6 @@
     margin: 2.5% 0;
 }
 
-.slideLeft {
-    position: relative;
-    animation-name: slideLeft;
-    animation-duration: 1500ms;
-}
-
-.slideRight {
-    position: relative;
-    animation-name: slideRight;
-    animation-duration: 1500ms;
-}
-
 @media (--medium) {
     .root {
         width: 70%;

@@ -28,9 +28,16 @@
     position: relative;
     animation-name: slideLeft;
     animation-duration: 1s;
+    transform: translateZ(0);
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000;
 }
 
 .mainImage {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000;
     width: 192px;
     height: 320px;
     border: 2px solid #ccc;

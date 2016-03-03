@@ -7,11 +7,36 @@
 }
 
 @keyframes slideLeft {
-    from {left: 100vw}
-    to {left: 0}
+    from {
+        transform: translate(1000px, 0px) translateZ(0);
+    }
+    to {
+        transform: translate(0px, 0px) translateZ(0);
+    }
 }
 
 @keyframes slideRight {
-    from {right: 100vw}
-    to {right: 0}
+    from {
+        transform: translate(-1000px, 0px) translateZ(0);
+    }
+    to {
+        transform: translate(0px, 0px) translateZ(0);
+    }
+}
+
+.slideLeft {
+    backface-visibility: hidden;
+    perspective: 1000;
+    position: relative;
+    animation-name: slideLeft;
+    animation-duration: 1500ms;
+}
+
+.slideRight {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000;
+    position: relative;
+    animation-name: slideRight;
+    animation-duration: 1500ms;
 }

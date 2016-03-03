@@ -12,12 +12,18 @@
 }
 
 .header {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000;
     position: relative;
     animation-name: slideLeft;
     animation-duration: 1s;
 }
 
 .mainImage {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000;
     width: 100%;
     position: relative;
     animation-name: slideRight;

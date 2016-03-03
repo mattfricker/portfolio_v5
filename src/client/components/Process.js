@@ -10,10 +10,10 @@ import css from '../styles/components/process.css';
 
 const Process = ({ css }) => (
     <Paper className={css.root}>
-        <LazyLoad offsetVertical={80}>
+        <LazyLoad debounce={false} offsetVertical={80}>
             <h2 className={css.header}> My process for problem-solving </h2>
         </LazyLoad>
-        <LazyLoad height={250} offsetVertical={80}>
+        <LazyLoad debounce={false} height={250} offsetVertical={80}>
             <img className={css.mainImage} src={cycle}></img>
         </LazyLoad>
     </Paper>

@@ -3,7 +3,7 @@ var express = require('express'),
 	logger = require('morgan'),
 	env = process.env.NODE_ENV = process.env.NODE_ENV || 'dev',
 	app = express(),
-	port = 80;
+	port = 3031;
 
 var indexFile = __dirname + '/build/index.html';
 console.log(indexFile)

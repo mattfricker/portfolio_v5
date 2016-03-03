@@ -61,10 +61,10 @@ const Process = ({ css }) => (
     <Paper className={css.root}>
         <h2 className={css.header}>My Stack</h2>
         <div className={css.contentHolder}>
-            <LazyLoad offsetVertical={80}>
+            <LazyLoad debounce={false} offsetVertical={80}>
                 <img className={css.mainImage} src={tetris}></img>
             </LazyLoad>
-            <LazyLoad offsetVertical={80}>
+            <LazyLoad debounce={false} offsetVertical={80}>
                 <div className={css.listContainer}>
                     {stackItems.map((item, index) => (
                         <List 

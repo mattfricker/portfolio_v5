@@ -27,7 +27,7 @@
     justify-content: center;
     position: relative;
     animation-name: slideLeft;
-    animation-duration: 1s;
+    animation-duration: 2s;
     transform: translateZ(0);
     transform: translateZ(0);
     backface-visibility: hidden;
@@ -44,7 +44,7 @@
     border-top: none;
     position: relative;
     animation-name: slideRight;
-    animation-duration: 1s;
+    animation-duration: 2s;
 }
 
 @media (--medium) {

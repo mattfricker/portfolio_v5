@@ -21,18 +21,27 @@
 }
 
 .mainImage {
+    padding: 0 2.5%;
     transform: translateZ(0);
     backface-visibility: hidden;
     perspective: 1000;
-    width: 100%;
+    width: 95%;
     position: relative;
     animation-name: slideRight;
     animation-duration: 2s;
 }
 
-@media(--small) {
+@media screen and (orientation:landscape) {
     .mainImage {
-        width: 450px;
-        height: 250px;
+        width: auto;
+        height: 50vh;
+        padding: 0;
+    }
+}
+
+@media screen and (orientation:landscape) and (--medium) {
+    .mainImage {
+        width: auto;
+        height: 40vh;
     }
 }

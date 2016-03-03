@@ -11,7 +11,7 @@ import css from '../styles/components/process.css';
 const Process = ({ css }) => (
     <Paper className={css.root}>
         <LazyLoad debounce={false} offsetVertical={80}>
-            <h2 className={css.header}> My process for problem-solving </h2>
+            <h2 className={css.header}> Focused on Solutions  </h2>
         </LazyLoad>
         <LazyLoad debounce={false} height={250} offsetVertical={80}>
             <img className={css.mainImage} src={cycle}></img>

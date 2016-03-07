@@ -1,5 +1,5 @@
-import React from 'react'
-import styleable from 'react-styleable'
+import React from 'react';
+import styleable from 'react-styleable';
 import LazyLoad from 'react-lazy-load';
 
 import Card from 'material-ui/lib/card/card';
@@ -9,7 +9,10 @@ import CardTitle from 'material-ui/lib/card/card-title';
 import FlatButton from 'material-ui/lib/flat-button';
 import CardText from 'material-ui/lib/card/card-text';
 
-import css from '../styles/components/portfolioItem.css';
+var css;
+if (process.env.NODE_ENV !== 'test') {
+    css = require('../styles/components/portfolioItem.css');
+}
 
 const PortfolioItem = ({css, title, image, link, description, status, codeSample, index}) => (
   <LazyLoad debounce={false} offsetVertical={80} className={css.root}>

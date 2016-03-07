@@ -5,8 +5,29 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --progress",
-    "test": "mocha './src/**/*.spec.js' --compilers js:babel-core/register",
+    "test": "sudo jest",
     "build": "webpack --config ./webpack.production.config.js --progress"
+  },
+  "jest": {
+    "scriptPreprocessor": "./node_modules/babel-jest",
+    "collectCoverage": true,
+    "testFileExtensions": [
+      "es6",
+      "js"
+    ],
+    "moduleFileExtensions": [
+      "es6",
+      "js",
+      "json"
+    ],
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react",
+      "<rootDir>/node_modules/react-dom",
+      "<rootDir>/node_modules/react-addons-test-utils"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ]
   },
   "author": "Matthew S. Fricker",
   "license": "ISC",
@@ -31,10 +52,13 @@
     "autoprefixer": "^6.3.3",
     "babel-cli": "^6.5.1",
     "babel-core": "^6.5.1",
+    "babel-jest": "^9.0.1",
     "babel-loader": "^6.2.2",
     "babel-plugin-react-transform": "^2.0.0",
     "babel-preset-es2015": "^6.5.0",
+    "babel-preset-jest": "^1.0.0",
     "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-3": "^6.5.0",
     "css-loader": "^0.23.1",
     "cssnext-loader": "^1.0.1",
     "expect": "^1.14.0",

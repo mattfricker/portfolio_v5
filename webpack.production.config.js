@@ -7,7 +7,10 @@ module.exports = {
     
     devtool: 'cheap-module-source-map',
     
-    entry: './src/client/main.js',
+    entry: [
+        'babel-polyfill',
+      './src/client/main.js',  
+    ],
     
     output: {
         path: __dirname + '/build',

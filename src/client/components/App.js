@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from './Header'
-import StackInfo from './StackInfo'
+import TechStack from '../containers/TechStack'
 import Portfolio from '../containers/Portfolio'
 import Process from './Process'
 
@@ -9,7 +9,7 @@ const App = () => (
         <Header />
         <Portfolio />
         <Process />
-        <StackInfo />
+        <TechStack />
     </div>
 )
 

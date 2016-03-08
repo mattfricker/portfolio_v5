@@ -11,53 +11,7 @@ import tetris from '../../../assets/images/stacktetris.png'
 
 import css from '../styles/components/stackInfo.css';
 
-const stackItems = [
-    {
-        title: "Front-End",
-        items: [
-            "JavaScript",
-            "Angular",
-            "React",
-            "HTML",
-            "CSS",
-            "jQuery",
-            "Sass",
-            "Bootstrap"
-        ]
-    },
-    {
-        title: "Back-End",
-        items: [
-            "Node",
-            "Expess",
-            "Web services",
-            "MySQL",
-            "MongoDB"
-        ]
-    },
-    {
-        title: "Package Managers",
-        items: [
-            "npm",
-            "Bower"
-        ]
-    },
-    {
-        title: "Build Tools",
-        items: [
-            "Gulp",
-            "webpack"
-        ]
-    },
-    {
-        title: "Version Control",
-        items: [
-            "Git"
-        ]
-    }
-];
-
-const Process = ({ css }) => (
+const Process = ({ css, items }) => (
     <Paper className={css.root}>
         <h2 className={css.header}>My Tech Stack</h2>
         <div className={css.contentHolder}>
@@ -66,7 +20,7 @@ const Process = ({ css }) => (
             </LazyLoad>
             <LazyLoad debounce={false} offsetVertical={80}>
                 <div className={css.listContainer}>
-                    {stackItems.map((item, index) => (
+                    {items.map((item, index) => (
                         <List 
                         className={css.list} 
                         key={index} 

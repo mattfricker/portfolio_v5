@@ -7,10 +7,11 @@ import homepageApp from './reducers'
 import App from './components/App'
 
 import initialPortfolio from '../data/portfolio.js'
+import techStack from '../data/techStack.js'
 
 import css from './styles/app.css'
 
-let store = createStore(homepageApp, {portfolio: initialPortfolio});
+let store = createStore(homepageApp, {portfolio: initialPortfolio, techStack: techStack});
 
 render(
   <Provider store={store}>

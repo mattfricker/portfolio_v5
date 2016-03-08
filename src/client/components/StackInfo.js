@@ -8,9 +8,10 @@ import ListItem from 'material-ui/lib/lists/list-item';
 
 import tetris from '../../../assets/images/stacktetris.png';
 
-
-import css from '../styles/components/stackInfo.css';
-
+var css;
+if (process.env.NODE_ENV !== 'test') {
+    css = require('../styles/components/stackInfo.css');
+}
 const Process = ({ css, items }) => (
     <Paper className={css.root}>
         <h2 className={css.header}>My Tech Stack</h2>

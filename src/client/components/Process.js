@@ -5,8 +5,10 @@ import LazyLoad from 'react-lazy-load';
 import Paper from 'material-ui/lib/paper';
 import cycle from '../../../assets/images/cycle.png';
 
-
-import css from '../styles/components/process.css';
+var css;
+if (process.env.NODE_ENV !== 'test') {
+    css = require('../styles/components/process.css');
+}
 
 const Process = ({ css }) => (
     <Paper className={css.root}>

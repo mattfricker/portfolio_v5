@@ -1,12 +1,12 @@
-import React from 'react'
-import styleable from 'react-styleable'
+import React from 'react';
+import styleable from 'react-styleable';
 import LazyLoad from 'react-lazy-load';
 
-import Paper from 'material-ui/lib/paper'
+import Paper from 'material-ui/lib/paper';
 import List from 'material-ui/lib/lists/list';
 import ListItem from 'material-ui/lib/lists/list-item';
 
-import tetris from '../../../assets/images/stacktetris.png'
+import tetris from '../../../assets/images/stacktetris.png';
 
 
 import css from '../styles/components/stackInfo.css';

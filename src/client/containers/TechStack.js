@@ -1,5 +1,5 @@
-import { connect } from 'react-redux'
-import StackInfo from '../components/StackInfo'
+import { connect } from 'react-redux';
+import StackInfo from '../components/StackInfo';
 
 const mapStateToProps = (state, ownProps) => {
   return {items: state.techStack};

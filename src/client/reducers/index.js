@@ -1,6 +1,6 @@
-import { combineReducers } from 'redux'
-import portfolio from './portfolio'
-import techStack from './techStack'
+import { combineReducers } from 'redux';
+import portfolio from './portfolio';
+import techStack from './techStack';
 
 const homepageApp = combineReducers({
   portfolio,

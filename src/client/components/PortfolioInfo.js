@@ -1,6 +1,6 @@
-import React from 'react'
-import styleable from 'react-styleable'
-import PortfolioItem from './PortfolioItem'
+import React from 'react';
+import styleable from 'react-styleable';
+import PortfolioItem from './PortfolioItem';
 
 import css from '../styles/components/portfolioInfo.css';
 

@@ -14,42 +14,33 @@ import items from '../../../src/data/portfolio';
 
 const css = {slideLeft: "slideLeft", slideRight: "slideRight"};
 
+function checkSlide(items, css, index, curClassName) {
+    let renderer = TestUtils.createRenderer();
+    renderer.render(<PortfolioItem
+        css={css}
+        key={index}
+        title={items[index].title}
+        link={items[index].link}
+        description={items[index].description}
+        image={items[index].image}
+        status={items[index].status}
+        codeSample={items[index].codeSample}
+        index={index}
+    />);
+    let output = renderer.getRenderOutput();
+    var card = findWithType(output, Card);
+    expect(card.props.className).toContain(curClassName);
+}
+
 describe('Tests for the portfolioItem component', function() {
     describe('Items slide in from correct side', function() {
-        let renderer = TestUtils.createRenderer();
 
         it('First item has a class of slideLeft', function() {
-            renderer.render(<PortfolioItem
-                css={css}
-                key="0"
-                title={items[0].title}
-                link={items[0].link}
-                description={items[0].description}
-                image={items[0].image}
-                status={items[0].status}
-                codeSample={items[0].codeSample}
-                index="0"
-            />);
-            let output = renderer.getRenderOutput();
-            var card = findWithType(output, Card);
-            expect(card.props.className).toContain(css.slideLeft);
+            checkSlide(items, css, 0, css.slideLeft);
         });
         
         it('Second item has a class of slideRight', function() {
-            renderer.render(<PortfolioItem
-                css={css}
-                key="1"
-                title={items[0].title}
-                link={items[0].link}
-                description={items[0].description}
-                image={items[0].image}
-                status={items[0].status}
-                codeSample={items[0].codeSample}
-                index="1"
-            />);
-            let output = renderer.getRenderOutput();
-            var card = findWithType(output, Card);
-            expect(card.props.className).toContain(css.slideRight);
+            checkSlide(items, css, 1, css.slideRight);
         });
     });
 });

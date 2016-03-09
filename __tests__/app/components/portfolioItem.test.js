@@ -14,7 +14,7 @@ import items from '../../../src/data/portfolio';
 
 const css = {slideLeft: "slideLeft", slideRight: "slideRight"};
 
-function checkSlide(items, css, index, curClassName) {
+function renderPortfolioItem(items, css, index) {
     let renderer = TestUtils.createRenderer();
     renderer.render(<PortfolioItem
         css={css}
@@ -27,20 +27,22 @@ function checkSlide(items, css, index, curClassName) {
         codeSample={items[index].codeSample}
         index={index}
     />);
-    let output = renderer.getRenderOutput();
-    var card = findWithType(output, Card);
-    expect(card.props.className).toContain(curClassName);
+    return renderer.getRenderOutput();
 }
 
 describe('Tests for the portfolioItem component', function() {
     describe('Items slide in from correct side', function() {
 
         it('First item has a class of slideLeft', function() {
-            checkSlide(items, css, 0, css.slideLeft);
+            let output = renderPortfolioItem(items, css, 0);
+            let card = findWithType(output, Card);
+            expect(card.props.className).toContain(css.slideLeft);
         });
         
         it('Second item has a class of slideRight', function() {
-            checkSlide(items, css, 1, css.slideRight);
+            let output = renderPortfolioItem(items, css, 1);
+            let card = findWithType(output, Card);
+            expect(card.props.className).toContain(css.slideRight);
         });
     });
 });

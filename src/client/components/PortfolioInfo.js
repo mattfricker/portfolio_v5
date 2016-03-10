@@ -1,8 +1,11 @@
-import React from 'react'
-import styleable from 'react-styleable'
-import PortfolioItem from './PortfolioItem'
+import React from 'react';
+import styleable from 'react-styleable';
+import PortfolioItem from './PortfolioItem';
 
-import css from '../styles/components/portfolioInfo.css';
+var css;
+if (process.env.NODE_ENV !== 'test') {
+    css = require('../styles/components/portfolioInfo.css');
+}
 
 const PortfolioInfo = ( {css, items }) => (
     <div id="portfolio" className={css.root}>

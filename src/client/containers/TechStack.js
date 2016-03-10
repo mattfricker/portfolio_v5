@@ -1,17 +1,17 @@
 import { connect } from 'react-redux';
-import PortfolioInfo from '../components/PortfolioInfo';
+import StackInfo from '../components/StackInfo';
 
 const mapStateToProps = (state, ownProps) => {
-  return {items: state.portfolio};
+  return {items: state.techStack};
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {}
 }
 
-const Portfolio = connect(
+const TechStackContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(PortfolioInfo)
+)(StackInfo)
 
-export default Portfolio
+export default TechStackContainer

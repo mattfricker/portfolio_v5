@@ -1,15 +1,15 @@
-import React from 'react'
-import Header from './Header'
-import StackInfo from './StackInfo'
-import Portfolio from '../containers/Portfolio'
-import Process from './Process'
+import React from 'react';
+import Header from './Header';
+import TechStack from '../containers/TechStack';
+import Portfolio from '../containers/Portfolio';
+import Process from './Process';
 
 const App = () => (
     <div>
         <Header />
         <Portfolio />
         <Process />
-        <StackInfo />
+        <TechStack />
     </div>
 )
 

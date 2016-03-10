@@ -1,13 +1,17 @@
 import React from 'react'
-import styleable from 'react-styleable'
+import styleable from 'react-styleable';
 
-import AppBar from 'material-ui/lib/app-bar'
+import AppBar from 'material-ui/lib/app-bar';
 import RaisedButton from 'material-ui/lib/raised-button';
 import SvgIcon from 'material-ui/lib/svg-icon';
 
-import logo from '../../../assets/images/logo.png'
-import GitHubIcon from '../../../assets/SVG/github.svg'
-import css from '../styles/components/header.css';
+import logo from '../../../assets/images/logo.png';
+import GitHubIcon from '../../../assets/SVG/github.svg';
+
+var css;
+if (process.env.NODE_ENV !== 'test') {
+    css = require('../styles/components/header.css');
+}
 
 const Header = ({ css }) => (
     <div className={css.root}>

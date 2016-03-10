@@ -1,8 +1,10 @@
-import { combineReducers } from 'redux'
-import portfolio from './portfolio'
+import { combineReducers } from 'redux';
+import portfolio from './portfolio';
+import techStack from './techStack';
 
 const homepageApp = combineReducers({
-  portfolio
+  portfolio,
+  techStack
 })
 
 export default homepageApp

@@ -13,7 +13,7 @@ const portfolioItem = (state, action) => {
   }
 }
 
-const portfolio = (state = {initial: "sunglasses"}, action) => {
+const portfolio = (state = [], action) => {
   switch (action.type) {
     case 'HOVER_PORTFOLIO_ITEM':
       return state.map(item =>

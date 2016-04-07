@@ -20,6 +20,10 @@
     padding-bottom: 5vh;
 }
 
+.gitHubIcon {
+    padding-right: 12px;
+}
+
 .actionHolder {
     display: flex;
     flex-direction: column;

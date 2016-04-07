@@ -19,7 +19,7 @@ const Header = ({ css }) => (
             showMenuIconButton={false}
             title={<img className={css.logo} src={logo}></img>}
             iconElementRight={
-                <a href="https://github.com/mattfricker">
+                <a className={css.gitHubIcon} href="https://github.com/mattfricker">
                     <SvgIcon>
                             <img src={GitHubIcon}></img> 
                     </SvgIcon>

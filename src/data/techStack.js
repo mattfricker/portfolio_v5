@@ -9,7 +9,8 @@ export default [
             "CSS",
             "jQuery",
             "Sass",
-            "Bootstrap"
+            "Bootstrap",
+            "D3"
         ]
     },
     {
